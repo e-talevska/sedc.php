@@ -1,50 +1,28 @@
-<?php 
-
-require_once 'functions.php';
-
-var_dump($_GET);
-
-$a = $b = 0;
-
-if(isset($_GET['a'])){
-    $a = (int) $_GET['a'];
-    
-    //$a = (int) $_GET['a'];
-    //settype($a, "integer"); 
-    
-} else {
-echo 'HELLO WORLD';
-    
-}
-
-if(isset($_GET['b'])){
-    $b = (int) $_GET['b'];
-    
-    //$a = (int) $_GET['a'];
-    //settype($a, "integer"); 
-    
-} else {
-echo 'HELLO WORLD b';
-    
-}
-?>
-
-<?php
-include 'header.php';
-?>
-
-
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
     <body>
         
-       <?php
-       
-       echo "Zbirot na a i b e " . zbir($a, $b);
-       
-       ?>
+        <<form action="action">
+            
+            <p>
+                <label for="username">Username</label>
+                <input id ="username" type="text"> 
+            </p>
+            
+            <p>
+                <label>Password</label>
+                <input type="password"> 
+            </p>
+            
+            <p>
+                dgfgdgdgsadssad
+                
+                <button name = "login" type="submit"> Login </button>
+            </p>
+            
+        </form>
 
     </body>
-    
-
-    <?php
-    include 'footer.php';
-    ?>
+</html>
