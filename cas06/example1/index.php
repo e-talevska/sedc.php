@@ -3,7 +3,7 @@
         <title>Forms</title>
     </head>
     <body>
-        <form method="post">
+        <form action="form_process.php" method="post">
             <p>
                 <label for="username">Username</label>
                 <input name="username" id="username" type="text">
