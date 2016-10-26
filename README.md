@@ -1,1 +1,1 @@
-# sedc.php
+# SEDC.PHP
