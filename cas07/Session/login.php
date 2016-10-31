@@ -1,4 +1,7 @@
 <?php 
+require 'db.php';
+?>
+<?php 
 session_start();
 ?>
 <?php 
@@ -6,20 +9,27 @@ session_start();
 if(isset($_SESSION ['logged_in'])){
     header("Location: profile.php");
     exit;
+   } else
+   {
+       if(isset($_COOKIE['logged_in'])) 
+       { 
+           $_SESSION['logged_in'] = $_COOKIE['logged_in'];
+           $_SESSION['username'] = $users[$_COOKIE['logged_in']] ['username'];
    }
-?>
-<?php 
-require 'db.php';
+   }
 ?>
 <?php 
 //check if the user submited the form 
 $errors =[];
 $username = '';
 $password ='';
+$rememberme = false;
  //dali gi procital informaciite
 if(isset($_POST ['login'])) {
     $username =$_POST['username'];
     $password =$_POST['pass'];
+    $rememberme = isset($_POST['rememberme'])? true : false;
+    
    //validacija
     if(trim($username)== ''){
       $errors['username'] ='Usrname can not be blank';  
@@ -47,6 +57,11 @@ if(isset($_POST ['login'])) {
         } else {
            $_SESSION['logged_in']= $userFound;
            $_SESSION['username'] = $username;
+           
+           if($rememberme){
+               setcookie("logged_in", $userFound, time()+ 3600*24*7);   
+           }
+           
             //redirect
             header("Location: profile.php");
             exit;
@@ -76,6 +91,11 @@ if(isset($_POST ['login'])) {
             echo (isset($errors['password']))? $errors['password']:"";    
             ?>
             </div>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="rememberme" <?php echo ($rememberme == true)? "checked='checked'" : ""; ?> > Remember me
+                </label>
             </p>
             <p>
             <!--<input type="submit">-->
