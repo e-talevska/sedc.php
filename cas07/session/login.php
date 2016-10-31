@@ -1,3 +1,4 @@
+<?php require 'db.php'; ?>
 <?php
 session_start();
 //ako e korisnikot logiran
@@ -5,10 +6,17 @@ session_start();
 if(isset($_SESSION['logged_in'])) {
     header("Location: profile.php");
     exit;
+} else {
+    if(isset($_COOKIE['logged_in'])) {
+        $_SESSION['logged_in'] = $_COOKIE['logged_in'];
+        $_SESSION['username'] = $users[$_COOKIE['logged_in']]['username'];
+        header("Location: profile.php");
+        exit;
+    }
 }
 ?>
-<?php require 'db.php'; ?>
 <?php
+//var_dump($_POST);
 //check if the user submmited the form
 //$errors = [
 //    'username' => '',
@@ -16,9 +24,11 @@ if(isset($_SESSION['logged_in'])) {
 //];
 $errors = [];
 $username = $password = '';
+$rememberme = false;
 if(isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $rememberme = isset($_POST['rememberme']) ? true : false;
     
     //validacija
     if(trim($username) == '') {
@@ -49,6 +59,11 @@ if(isset($_POST['login'])) {
         } else {
            $_SESSION['logged_in'] = $userFound;
            $_SESSION['username'] = $username;
+           
+           if($rememberme) {
+               setcookie("logged_in", $userFound, time()+3600*24*7);
+           }
+           
             //redirect
             header("Location: profile.php");
             exit;
@@ -80,6 +95,11 @@ if(isset($_POST['login'])) {
                 <label for="pass">Password</label>
                 <input value="<?php echo $password; ?>" name="password" id="pass" type="password">
              <div><?php echo (isset($errors['password'])) ? $errors['password'] : ""; ?></div>
+             </p>
+             <p>
+                 <label>
+                     <input type="checkbox" name="rememberme" <?php echo ($rememberme == true) ? "checked='checked'" : ""; ?> > Remember me
+                 </label>
              </p>
             <p>
                 <!--<input type="submit" >-->
