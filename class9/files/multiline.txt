@@ -1,0 +1,4 @@
+fistname,lastname,email
+todor,tilievski,t.ilievski.com
+john,doe, john@example.com
+jane,doe, koko@example.com
