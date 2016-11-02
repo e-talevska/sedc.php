@@ -1,0 +1,4 @@
+firstname,lastname,email
+aleksandar,zmejkoski,a.zmejkoski@hotmail.com
+john,doe,john@example.com
+jane,doe,jane@example.com
