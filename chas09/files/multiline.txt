@@ -1,0 +1,6 @@
+firstname,lastname,email
+emilija,talevska,e.talevska@hotmail.com
+jhon,doe,john@example.com
+jane,doe,jane@example.com
+stefan,ristevski,stefanbt@live.com
+
