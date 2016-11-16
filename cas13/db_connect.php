@@ -19,12 +19,23 @@ class MySQL {
         }
     }
     
+    function read($table) {
+        $query = "SELECT * FROM $table";
+        $result = $this->mysql->query($query);
+
+        if($result == FALSE) {
+//            var_dump($this->mysql->error);
+            return NULL;
+        }
+        
+        while($row = $result->fetch_row()) {
+            var_dump($row);
+        }
+        
+    }
+    
     public function __destruct() {
         $this->mysql->close();
     }
 }
-
-$mysql = new MySQL();
-
-
 ?>
