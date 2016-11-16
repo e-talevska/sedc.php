@@ -6,7 +6,7 @@
 
         
         <form action="index1.php" method="post">
-            
+               
             <p>
                 <label for="username">Username</label>
                 <input id="username" type="text" name="user">
