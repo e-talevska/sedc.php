@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/usr/share/eclipse/dropins/xsd/eclipse/plugins/org.eclipse.xsd_2.9.0.dist.jar!/cache/www.w3.org/2001/xml.xsd"/>
+  <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/usr/share/eclipse/dropins/xsd/eclipse/plugins/org.eclipse.xsd_2.9.0.dist.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
+  <public publicId="-//OASIS//DTD DocBook CALS Table Model V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/calstblx.dtd"/>
+  <public publicId="-//Norman Walsh//DTD DocBk XML V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/docbookx.dtd"/>
+  <public publicId="-//Debian//DTD XML Catalogs V1.0-Based Extension V1.0" uri="file:/usr/share/xml/schema/xml-core/tr9401.dtd"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Character Entities V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/dbcentx.mod"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Character Entities V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/dbcentx.mod"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Notations V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/dbnotnx.mod"/>
+  <public publicId="-//OASIS//DTD DocBook XML V4//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4/docbookx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES General Technical//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOtech.ent"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Character Entities V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/dbcentx.mod"/>
+  <public publicId="-//OASIS//DTD DocBook XML V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/docbookx.dtd"/>
+  <system systemId="http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" uri="file:/usr/share/xml/svg/svg10.dtd"/>
+  <system systemId="http://docbook.org/xml/4.2/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/docbookx.dtd"/>
+  <public publicId="-//OASIS//DTD XML Catalogs V1.0//EN" uri="file:/usr/share/xml/schema/xml-core/catalog.dtd"/>
+  <public publicId="-//OASIS//DTD DocBook CALS Table Model V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/calstblx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Alternative Greek Symbols//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOgrk4.ent"/>
+  <public publicId="-//W3C//DTD SVG//EN" uri="file:/usr/share/xml/svg/svg11.dtd"/>
+  <public publicId="-//W3C//DTD SVG 1.1//EN" uri="file:/usr/share/xml/svg/svg11.dtd"/>
+  <public publicId="-//Normal Walsh//Exchange Table Model 19960430 XML V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/soextblx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Publishing//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOpub.ent"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/dbhierx.mod"/>
+  <public publicId="ISO 8879:1986//ENTITIES Monotoniko Greek//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOgrk2.ent"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Additional General Entities V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/dbgenent.mod"/>
+  <public publicId="-//Norman Walsh//ENTITIES DocBook XML Additional General Entities V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/dbgenent.mod"/>
+  <system systemId="http://www.oasis-open.org/docbook/xml/4.1/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.1/docbookx.dtd"/>
+  <system systemId="/usr/share/sgml/dtd/svg11.dtd" uri="file:/usr/share/xml/svg/svg11.dtd"/>
+  <public publicId="-//Norman Walsh//ENTITIES DocBook XML Notations V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/dbnotnx.mod"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Relations//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamsr.ent"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Notations V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/dbnotnx.mod"/>
+  <system systemId="http://people.debian.org/~mrj/oasis/catalog/xml/tr9401.dtd" uri="file:/usr/share/xml/schema/xml-core/tr9401.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Delimiters//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamsc.ent"/>
+  <public publicId="-//OASIS//DTD DocBook CALS Table Model V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/calstblx.dtd"/>
+  <system systemId="http://www.oasis-open.org/docbook/xml/4.0/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/docbookx.dtd"/>
+  <public publicId="-//OASIS//DTD XML Exchange Table Model 19990315//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/soextblx.dtd"/>
+  <public publicId="-//W3C//DTD SVG 1//EN" uri="file:/usr/share/xml/svg/svg11.dtd"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Additional General Entities V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/dbgenent.mod"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Latin 2//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOlat2.ent"/>
+  <public publicId="ISO 8879:1986//ENTITIES Box and Line Drawing//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISObox.ent"/>
+  <public publicId="+//IDN faq.org//DTD Frequently Asked Questions//EN//XML" uri="file:/usr/share/xml/qaml/qaml-xml.dtd"/>
+  <public publicId="-//Norman Walsh//ELEMENTS DocBook XML Information Pool V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/dbpoolx.mod"/>
+  <public publicId="-//OASIS//DTD DocBook XML V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/docbookx.dtd"/>
+  <system systemId="/usr/share/sgml/dtd/svg10.dtd" uri="file:/usr/share/xml/svg/svg10.dtd"/>
+  <system systemId="/usr/share/sgml/dtd/qaml-xml.dtd" uri="file:/usr/share/xml/qaml/qaml-xml.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Binary Operators//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamsb.ent"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook XML HTML Tables V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/htmltblx.mod"/>
+  <public publicId="-//OASIS//DTD XML Exchange Table Model 19990315//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/soextblx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Greek Letters//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOgrk1.ent"/>
+  <system systemId="http://xml.ascc.net/xml/resource/qaml-xml.dtd" uri="file:/usr/share/xml/qaml/qaml-xml.dtd"/>
+  <uri name="http://www.w3.org/1999/XSL/Transform" uri="file:/usr/share/xml/xslt/xslt-2.0.xsd"/>
+  <public publicId="-//W3C//DTD SVG 1.0//EN" uri="file:/usr/share/xml/svg/svg10.dtd"/>
+  <system systemId="http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/docbookx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Diacritical Marks//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOdia.ent"/>
+  <public publicId="ISO 8879:1986//ENTITIES Greek Symbols//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOgrk3.ent"/>
+  <public publicId="+//IDN faq.org//DTD Frequently Asked Questions 2.4//EN//XML" uri="file:/usr/share/xml/qaml/qaml-xml.dtd"/>
+  <system systemId="http://docbook.org/xml/4.1/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.1/docbookx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Arrow Relations//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamsa.ent"/>
+  <system systemId="http://globaltranscorp.org/oasis/catalog/xml/tr9401.dtd" uri="file:/usr/share/xml/schema/xml-core/tr9401.dtd"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook XML Information Pool V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/dbpoolx.mod"/>
+  <uri name="http://www.w3.org/2001/XInclude" uri="file:/usr/share/xml/xslt/xinclude.xsd"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Additional General Entities V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/dbgenent.mod"/>
+  <public publicId="+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN" uri="file:/usr/share/xml/qaml/qaml-xml.dtd"/>
+  <system systemId="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" uri="file:/usr/share/xml/svg/svg11.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOnum.ent"/>
+  <public publicId="-//Norman Walsh//ENTITIES DocBook XML Character Entities V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/dbcentx.mod"/>
+  <public publicId="-//Norman Walsh//DTD CALS Table Model XML V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/calstblx.dtd"/>
+  <system systemId="http://docbook.org/xml/4.1.2/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/docbookx.dtd"/>
+  <public publicId="ISO 8879:1986//ENTITIES Non-Russian Cyrillic//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOcyr2.ent"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.1.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/dbhierx.mod"/>
+  <system systemId="http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.1.2/docbookx.dtd"/>
+  <system systemId="http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd" uri="file:/usr/share/xml/schema/xml-core/catalog.dtd"/>
+  <public publicId="-//W3C//DTD SVG 20010904//EN" uri="file:/usr/share/xml/svg/svg10.dtd"/>
+  <system systemId="http://docbook.org/xml/4.3/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/docbookx.dtd"/>
+  <public publicId="-//OASIS//DTD DocBook XML V4.1//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.1/docbookx.dtd"/>
+  <system systemId="http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/docbookx.dtd"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/dbhierx.mod"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook Information Pool V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/dbpoolx.mod"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Negated Relations//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamsn.ent"/>
+  <public publicId="ISO 8879:1986//ENTITIES Russian Cyrillic//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOcyr1.ent"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Math Symbols: Ordinary//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOamso.ent"/>
+  <public publicId="ISO 8879:1986//ENTITIES Added Latin 1//EN//XML" uri="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/ISOlat1.ent"/>
+  <public publicId="-//OASIS//ENTITIES DocBook Notations V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/dbnotnx.mod"/>
+  <public publicId="-//OASIS//ELEMENTS DocBook Information Pool V4.3//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.3/dbpoolx.mod"/>
+  <public publicId="-//Norman Walsh//ELEMENTS DocBook XML Document Hierarchy V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/dbhierx.mod"/>
+  <public publicId="-//Norman Walsh//DTD DocBook XML V4.0//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.0/docbookx.dtd"/>
+  <public publicId="-//OASIS//DTD DocBook XML V4.2//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4.2/docbookx.dtd"/>
+  <public publicId="-//GlobalTransCorp//DTD XML Catalogs V1.0-Based Extension V1.0//EN" uri="file:/usr/share/xml/schema/xml-core/tr9401.dtd"/>
+  <public publicId="-//OASIS//DTD DocBook XML//EN" uri="file:/usr/share/xml/docbook/schema/dtd/4/docbookx.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//ENTITIES DocBook XML Notations V4.0//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Character Entities V4.3//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.2//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/svg/catalog.xml" systemIdStartString="http://www.w3.org/TR/2001/REC-SVG-20010904/"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model V4.3//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.1//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//DTD CALS Table Model XML V4.0//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Notations V4.4//EN"/>
+  <delegateURI catalog="file:/usr/share/xml/scrollkeeper/dtds/catalog.xml" uriStartString="http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//DTD XML Exchange Table Model 19990315//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//DTD DocBk XML V4.0//EN"/>
+  <delegatePublic catalog="file:/etc/xml/xml-core.xml" publicIdStartString="-//OASIS//DTD XML Catalogs V1.0//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model V4.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Additional General Entities V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Character Entities V4.2//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/qaml/catalog.xml" systemIdStartString="/usr/share/sgml/dtd/qaml-xml.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Additional General Entities V4.5//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//OASIS//DTD XML Exchange Table Model 19990315"/>
+  <delegateSystem catalog="file:/etc/xml/sgml-data.xml" systemIdStartString="http://www.w3.org/Graphics/SVG/1.1/"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Notations V4.3//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Information Pool V4.5//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model V4.5//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Additional General Entities V4.4//EN"/>
+  <delegateURI catalog="file:/etc/xml/w3c-xsd-xslt.xml" uriStartString="http://www.w3.org/1999/XSL/Transform"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Character Entities V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.2//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/schema/xml-core/catalog.xml" systemIdStartString="http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Notations V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Character Entities V4.4//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.3//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//ELEMENTS DocBook XML Information Pool V4.0//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/schema/xml-core/catalog.xml" publicIdStartString="-//OASIS//DTD XML Catalogs V1.0//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Information Pool V4.3//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//ENTITIES DocBook XML Character Entities V4.0//EN"/>
+  <delegateSystem catalog="file:/etc/xml/sgml-data.xml" systemIdStartString="http://xml.ascc.net/xml/resource/qaml-xml"/>
+  <delegateSystem catalog="file:/usr/share/xml/qaml/catalog.xml" systemIdStartString="http://xml.ascc.net/xml/resource/qaml-xml"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"/>
+  <delegateSystem catalog="file:/usr/share/xml/svg/catalog.xml" systemIdStartString="http://www.w3.org/Graphics/SVG/1.1/"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Norman Walsh//DTD CALS Table Model XML"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.0/docbookx.dtd"/>
+  <delegatePublic catalog="file:/etc/xml/sgml-data.xml" publicIdStartString="-//W3C//DTD SVG"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Norman Walsh//DTD DocBook XML"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" systemIdStartString="http://docbook.org/xml/4.2/docbookx.dtd"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" systemIdStartString="http://docbook.org/xml/4.4/docbookx.dtd"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//OASIS//DTD DocBook XML"/>
+  <delegatePublic catalog="file:/etc/xml/sgml-data.xml" publicIdStartString="+//IDN faq.org//DTD Frequently Asked Questions"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//ENTITIES DocBook XML Additional General Entities V4.0//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Norman Walsh//DTD DocBk XML"/>
+  <delegatePublic catalog="file:/usr/share/xml/qaml/catalog.xml" publicIdStartString="+//IDN faq.org//DTD Frequently Asked Questions"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Character Entities V4.5//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.1/docbookx.dtd"/>
+  <delegateURI catalog="file:/etc/xml/w3c-xsd-xslt.xml" uriStartString="http://www.w3.org/2001/XInclude"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model V4.4//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Information Pool V4.4//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//ELEMENTS DocBook XML Document Hierarchy V4.0//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//OASIS//ENTITIES DocBook"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/catalog.xml" systemIdStartString="http://docbook.org/xml/4.1/docbookx.dtd"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Notations V4.5//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook XML Information Pool V4.1.2//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model V4.1.2//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.1.2/catalog.xml" systemIdStartString="http://docbook.org/xml/4.1.2/docbookx.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook XML HTML Tables V4.4//EN"/>
+  <delegateSystem catalog="file:/etc/xml/sgml-data.xml" systemIdStartString="/usr/share/sgml/dtd/qaml-xml.dtd"/>
+  <delegatePublic catalog="file:/etc/xml/xml-core.xml" publicIdStartString="-//GlobalTransCorp//DTD XML Catalogs V1.0-Based Extension V1.0//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Norman Walsh//ENTITIES DocBk XML"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook XML HTML Tables V4.5//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook"/>
+  <delegateSystem catalog="file:/etc/xml/xml-core.xml" systemIdStartString="http://globaltranscorp.org/oasis/catalog/xml/tr9401.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/entities/xml-iso-entities-8879.1986/catalog.xml" publicIdStartString="ISO 8879:1986//ENTITIES"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Normal Walsh//Exchange Table Model 19960430"/>
+  <delegatePublic catalog="file:/usr/share/xml/svg/catalog.xml" publicIdStartString="-//W3C//DTD SVG"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Normal Walsh//Exchange Table Model 19960430 XML V4.0//EN"/>
+  <delegateSystem catalog="file:/etc/xml/sgml-data.xml" systemIdStartString="http://www.w3.org/TR/2001/REC-SVG-20010904/"/>
+  <delegateURI catalog="file:/usr/share/xml/xslt/catalog.xml" uriStartString="http://www.w3.org/2001/XInclude"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//Norman Walsh//ELEMENTS DocBk XML"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.5//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/schema/xml-core/catalog.xml" publicIdStartString="-//GlobalTransCorp//DTD XML Catalogs V1.0-Based Extension V1.0//EN"/>
+  <delegateSystem catalog="file:/etc/xml/docbook-xml.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.4//EN"/>
+  <delegatePublic catalog="file:/etc/xml/docbook-xml.xml" publicIdStartString="-//OASIS//DTD DocBook CALS Table Model"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Information Pool V4.2//EN"/>
+  <delegateURI catalog="file:/etc/xml/rarian-compat.xml" uriStartString="http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/"/>
+  <delegateSystem catalog="file:/usr/share/xml/schema/xml-core/catalog.xml" systemIdStartString="http://globaltranscorp.org/oasis/catalog/xml/tr9401.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/qaml/catalog.xml" publicIdStartString="+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.0/catalog.xml" publicIdStartString="-//Norman Walsh//DTD DocBook XML V4.0//EN"/>
+  <delegateSystem catalog="file:/etc/xml/xml-core.xml" systemIdStartString="http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Additional General Entities V4.2//EN"/>
+  <delegatePublic catalog="file:/etc/xml/sgml-data.xml" publicIdStartString="+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.5//EN"/>
+  <delegatePublic catalog="file:/etc/xml/sgml-data.xml" publicIdStartString="ISO 8879:1986//ENTITIES"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook Document Hierarchy V4.3//EN"/>
+  <delegateURI catalog="file:/usr/share/xml/xslt/catalog.xml" uriStartString="http://www.w3.org/1999/XSL/Transform"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Additional General Entities V4.3//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.4/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML V4.4//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" systemIdStartString="http://docbook.org/xml/4.3/docbookx.dtd"/>
+  <delegateSystem catalog="file:/etc/xml/docbook-xml.xml" systemIdStartString="http://docbook.org/xml/"/>
+  <delegateSystem catalog="file:/usr/share/xml/svg/catalog.xml" systemIdStartString="/usr/share/sgml/dtd/svg"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/catalog.xml" publicIdStartString="-//OASIS//DTD DocBook XML//EN"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.2/catalog.xml" publicIdStartString="-//OASIS//ENTITIES DocBook Notations V4.2//EN"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" systemIdStartString="http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"/>
+  <delegateSystem catalog="file:/usr/share/xml/docbook/schema/dtd/4.5/catalog.xml" systemIdStartString="http://docbook.org/xml/4.5/docbookx.dtd"/>
+  <delegateSystem catalog="file:/etc/xml/sgml-data.xml" systemIdStartString="/usr/share/sgml/dtd/svg"/>
+  <delegatePublic catalog="file:/usr/share/xml/docbook/schema/dtd/4.3/catalog.xml" publicIdStartString="-//OASIS//ELEMENTS DocBook XML HTML Tables V4.3//EN"/>
+  <rewriteURI rewritePrefix="file:/usr/share/xml/scrollkeeper/dtds/" uriStartString="http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/"/>
+</catalog>
