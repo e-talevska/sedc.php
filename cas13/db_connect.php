@@ -28,10 +28,44 @@ class MySQL {
             return NULL;
         }
         
-        while($row = $result->fetch_row()) {
-            var_dump($row);
+        $return = [];
+        while($row = $result->fetch_assoc()) {
+            $return[] = $row;
         }
         
+        $result->free_result();
+        
+        return $return;
+    }
+    
+    public function insertNewMenuItem($name, $position, $visible) {
+        $query = "INSERT INTO menu_items ";
+        $query .= "(name,position,visible) ";
+        $query .= "VALUES ('$name',$position, $visible)";
+        
+        return $this->mysql->query($query);
+    }
+    
+    /*
+     * $values = [
+     *  'name' => 'Vrednost',
+     *  'position' => 1
+     * ]
+     * 
+     */
+    public function updateMenuItem($id, $values) {
+        $query = "UPDATE menu_items SET ";
+        foreach ($values as $key => $value) {
+            if(is_numeric($value)) {
+                $query .= "$key = $value, ";
+            } else {
+                $query .= "$key = '$value', ";
+            }
+        }
+        $query = substr($query, 0, strlen($query) -2);
+        $query .= " WHERE id=$id";
+        
+        return $this->mysql->query($query);
     }
     
     public function __destruct() {
