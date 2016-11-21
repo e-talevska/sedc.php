@@ -1,0 +1,5 @@
+<?php
+use blog\MySQL;
+use mysqli;
+$_sql = new MySQL();
+$_sql->get_db()->co

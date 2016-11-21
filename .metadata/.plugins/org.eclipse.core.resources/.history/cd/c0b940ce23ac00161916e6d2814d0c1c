@@ -1,0 +1,4 @@
+<?php
+include 'db_connect.php';
+use blog\MySQL;
+$_sql = new MySQL();

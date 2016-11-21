@@ -53,4 +53,20 @@ class MySQL {
 		$query .= "where id = $id";
 		return $this->mysql->query($query);
 	}
+	public function delete($data, $table) {
+		$query = "delete from $table where";
+			if(isset($data['id'])) {
+				$query.=" id = {$data['id']},";
+			} else if(isset($data['position'])) {
+				$query.=" position = {$data['position']},";
+			} else if(isset($data['name'])) {
+				$query.=" name = '{$data['name']}',";
+			} else {
+				throw new Exception("Please enter the data to be deleted.");
+				exit();
+			}
+		$query = substr($query, 0, strlen($query) -1);
+		var_dump($query);
+		return $this->mysql->query($query);
+	}
 }

@@ -1,0 +1,4 @@
+<?php
+use blog\MySQL;
+$_sql = new MySQL();
+$_sql->get_db()->er

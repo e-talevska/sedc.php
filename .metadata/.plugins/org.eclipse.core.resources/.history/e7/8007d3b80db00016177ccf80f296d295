@@ -1,0 +1,25 @@
+<?php
+require 'db_connect.php';
+use blog;
+if(isset($_POST['submit'])) {
+	if($_POST['id'] == $_POST['name'] && $_POST['position'] == $_POST['name'] && $_POST['name'] == "") {
+		?>
+		<fo
+		<?php
+	}
+}
+?>
+<style>
+		form * {
+			display: block;
+		}
+		</style>
+<div style="margin: 5px 3px;">
+	<form method="post">
+		
+		<input type="text" placeholder="id" name="id">
+		<input type="text" placeholder="name" name="name">
+		<input type="text" placeholder="position" name="position">
+		<button type="submit" name="submit">Delete</button>
+	</form>
+</div>

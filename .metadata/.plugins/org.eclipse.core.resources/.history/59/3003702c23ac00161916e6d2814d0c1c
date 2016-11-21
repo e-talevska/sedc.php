@@ -1,0 +1,3 @@
+<?php
+use blog\MySQL;
+$_sql = new MySQL();

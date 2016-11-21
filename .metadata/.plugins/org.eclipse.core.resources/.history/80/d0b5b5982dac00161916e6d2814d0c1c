@@ -1,0 +1,14 @@
+<form>
+	<p>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name">
+	</p>
+	<p>
+		<label for="position">Position</label>
+		<input type="text" name="position" id="position">
+	</p>
+	<p>
+		<label for="visible">Position</label>
+		<input type="checkbox" name="visible" id="visible">
+	</p>
+</form>
