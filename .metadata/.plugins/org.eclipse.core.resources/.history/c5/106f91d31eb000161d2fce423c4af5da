@@ -1,0 +1,16 @@
+<?php
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "password");
+define("DB_NAME", "labvezbi");
+
+function doesExist ($username) {
+	$mysql = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	$username = $mysql->real_escape_string($username);
+	$query = "select * from users where `username` = '$username'";
+	$res = $mysql->query($query);
+	
+	if ($res->mysql_)
+	
+	$mysql->close();
+}
