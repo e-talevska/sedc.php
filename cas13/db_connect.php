@@ -46,6 +46,13 @@ class MySQL {
         return $this->mysql->query($query);
     }
     
+      public function deleteMenuItem($id) {
+        $query = "DELETE FROM menu_items ";
+        $query .= "WHERE id=$id";
+        
+        return $this->mysql->query($query);
+    }
+    
     /*
      * $values = [
      *  'name' => 'Vrednost',
