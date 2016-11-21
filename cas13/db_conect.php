@@ -59,6 +59,13 @@ class MySQL {
              
         echo $query;
     }
+    public function deleteMenuItem($id, $values){
+     $query = "DELETE FROM menu_items WHERE";
+     $query .= "WHERE id=$id";
+     
+     return $this->mysql->query($query);
+        
+    }
 
     public function __destruct(){
     $this->mysql->close();
