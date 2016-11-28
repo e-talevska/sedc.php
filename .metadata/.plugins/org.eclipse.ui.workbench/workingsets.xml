@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480357407553_2" label="Blog" name="Blog">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/blog" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479315561204_0" label="Window Working Set" name="Aggregate for window 1479315561203"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480103557402_1" label="Window Working Set" name="Aggregate for window 1480103557402"/>
+<mruList name="Blog"/>
 </workingSetManager>

@@ -1,3 +1,3 @@
-defaultPHPServer=Default PHP Web Server
+defaultPHPServer=Laravel Blog
 eclipse.preferences.version=1
-phpServers=<server><name>Default PHP Web Server</name><base_url>http\://localhost</base_url><hostname>localhost</hostname><document_root></document_root></server>
+phpServers=<server><hostname>blog.dev</hostname><port>-1</port><debuggerId>org.eclipse.php.debug.core.xdebugDebugger</debuggerId><document_root>/</document_root><name>Laravel Blog</name><base_url>http\://blog.dev</base_url><id>php-server-953b9cbd-ee90-422e-acf1-d9863835d4fd</id></server>
