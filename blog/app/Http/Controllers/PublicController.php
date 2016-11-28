@@ -7,6 +7,19 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function about() {
-        return "About us";
+      //  $name = "Sedc";
+       // $lastname = "<i>PHP0</i>";
+        $values = [
+            'firstname'=> 'Sedc',
+            'lastname'=>'<i>PHP</i>',
+            'myteam'=>[
+                'John Doe',
+                'Jane Doe',
+                
+            ]
+        ];
+        return view('public/about', $values);
+               // ->with('firstname', $name)
+                //->with('lastname', $lastname);
     }
 }
