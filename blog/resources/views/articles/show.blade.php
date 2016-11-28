@@ -1,0 +1,9 @@
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <h2>{{$article->title}}</h2>
+        <p>{{$article->content}}</p>
+    </body>
+</html>
