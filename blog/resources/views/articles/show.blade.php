@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{$article->title}}</title>
-</head>
-<body>
+@extends('layouts/layout')
 
+@section('title')
+	{{$article->title}}
+
+@endsection
+
+@section('content')
+<article>
 <h2>{{$article->title}}</h2>
-<p>{{$article->content}}</p>
-
-</body>
-</html>
+<div class="content">{{$article->content}}</div>
+</article>
+@endsection

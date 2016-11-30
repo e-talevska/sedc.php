@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+//model sto go kreirahme preku gitbas
 class Article extends Model
 {
     protected $fillable=[
