@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.violet_color {
+	color: #003366;	
+}
+.title {
+	font-size: 3em;
+	text-transform: uppercase;
+}
+a:HOVER {
+	text-decoration: none;
+}
+a {
+	outline: none;
+}

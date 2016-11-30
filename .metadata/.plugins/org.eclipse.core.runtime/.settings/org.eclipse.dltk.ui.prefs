@@ -1,4 +1,8 @@
+CustomFiltersActionGroup.org.eclipse.php.ui.explorer.TAG_DUMMY_TO_TEST_EXISTENCE=storedViewPreferences
 eclipse.preferences.version=1
+lastRecentlyUsedFilters=org.eclipse.php.ui.explorer.DotFilesFilter,
+org.eclipse.php.ui.explorer.RSEProjectFilter=true
+org.eclipse.php.ui.explorer.UseStatementFilter=true
 sourceHoverBackgroundColor.SystemDefault=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
