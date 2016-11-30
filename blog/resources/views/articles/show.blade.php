@@ -1,11 +1,9 @@
-<html>
-    <head>
-        <title>{{$article->title}}</title>
-    </head>
-    <body>
-<h2> {{ $article->title}}</h2>
-      <p>{{ $article->content}}</p>
-    </body>
-</html>
+@extends('layouts/layout')
+@section ('content')
+        <article>
+<h2 class="red_color"> {{ $article->title}}</h2>
+      <p><div class="content">{{ $article->content}}</div>
+      </article
+ @endsection
 
 

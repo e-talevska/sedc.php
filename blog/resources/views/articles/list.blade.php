@@ -1,12 +1,19 @@
-<html>
-    <head>
-        <title>Articles</title>
-    </head>
-    <body>
+@extends('layouts/layout')
 
+@section ('title')
+Articles 
+@endsection
+
+@section ('content')
+<h2 class="violet_color">Articles</h2>
+<hr>
       @foreach ($articles as $article)
-      <h2> {{ $article->title}}</h2>
-      <p>{{ $article->content}}</p>
+      <article>
+      <h2> 
+          <a href="{{url('article/'. $article->slug)}}">{{ $article->title}}</a>
+          </h2>
+      <div class="content">{{ $article->content}}</div>
+      </article>
       @endforeach
-    </body>
-</html>
+      @endsection
+      

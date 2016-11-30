@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('about', 'PublicController@about');
 Route::resource('article','ArticlesController');
+Route::resource('category','CategoriesController');
