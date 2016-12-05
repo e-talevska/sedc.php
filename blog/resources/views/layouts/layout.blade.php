@@ -7,6 +7,7 @@
               crossorigin="anonymous">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">

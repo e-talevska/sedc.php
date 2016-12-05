@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Illuminate\Support\Facades\Input;
 
 class ArticlesController extends Controller
 {
@@ -26,7 +27,8 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        $categories = \App\Category::pluck('title', 'id');
+        return view('articles.create', ['categories' => $categories]);
     }
 
     /**
@@ -37,7 +39,15 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['user_id'] = 1;
+        $image = Input::file('image');
+        $imageName = time().'.'.$image->getClientOriginalExtension();
+        $data['image'] = $imageName;
+        $image->move("uploads",$imageName);
+//        var_dump($imageName);exit;
+        Article::create($data);
+        return redirect('article');
     }
 
     /**
@@ -63,7 +73,9 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        $categories = \App\Category::pluck('title', 'id');
+        return view('articles.edit', ['categories' => $categories, 'article' => $article]);
     }
 
     /**
@@ -75,7 +87,22 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article = Article::findOrFail($id);
+        $data = $request->all();
+        $data['user_id'] = 1;
+        $image = Input::file('image');
+        if(isset($image)) {
+            $imageName = time().'.'.$image->getClientOriginalExtension();
+            $data['image'] = $imageName;
+            $image->move("uploads",$imageName);
+            
+             //delete old img
+            if($article->image != '' && file_exists("uploads/".$article->image)) {
+                unlink("uploads/".$article->image);
+            }
+        }
+        $article->update($data);
+        return redirect('article');
     }
 
     /**
