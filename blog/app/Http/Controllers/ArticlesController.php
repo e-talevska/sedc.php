@@ -14,9 +14,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-//        compact('articles');
-        return view('articles.list',['articles' => $articles]);
+       $articles = Article::all();
+       
+       return view('articles.list',['articles' =>$articles]);
     }
 
     /**
@@ -48,11 +48,11 @@ class ArticlesController extends Controller
      */
     public function show($slug)
     {
-        $article = Article::where(['slug' => $slug])->first();
-        if(!isset($article)) {
-            return abort("404");
-        }
-        return view('articles.show', ['article' => $article]);
+       $article = Article::where(['slug' => $slug])->first();
+    if(!isset($article)){
+        return abort("404");
+    }
+       return view('articles.show', ['article' => $article]);
     }
 
     /**

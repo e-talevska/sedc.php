@@ -6,21 +6,23 @@ use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
-    public function about($name) {
-//        $name = "Sedc";
-//        $lastname = "<i>PHP</i>";
+    public function about() {
+//        $name = 'sedc';
+//        $lastname= "<i>PHP</i>";
         
         $values = [
           'firstname' => 'Sedc',
-          'lastname' => '<i>PHP</i>',
-          'myteam' => [
-//                'John Doe',
-//                'Jane Doe',
-            ]
+            'lastname' => '<i>PHP</i>',
+              'myteam' => [
+                  'John Doe',
+                  'Jane Doe',
+                  
+              ]
+            
         ];
         
-        return view('public.about', $values);
-//                ->with('firstname', $name)
-//                ->with('lastname', $lastname);
+        return view ("public/about", $values);
+//                ->with('firstname',$name)
+//                ->with('lastname',$lastname);
     }
 }
