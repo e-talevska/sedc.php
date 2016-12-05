@@ -1,3 +1,3 @@
-GitRepositoriesView.GitDirectories=/var/www/html/PHPKurs/sedc.php/.git\:
-GitRepositoriesView.GitDirectories.relative=.git\:
+GitRepositoriesView.GitDirectories=/var/www/html/PHPKurs/sedc.php/.git\:/var/www/html/PHPKurs/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:/var/www/html/PHPKurs/.git\:
 eclipse.preferences.version=1

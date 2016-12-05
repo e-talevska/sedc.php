@@ -2,7 +2,12 @@
 <section name="Workbench">
 	<item value="0" key="TypeHierarchyViewPart.orientation"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="/home/darijan/Desktop/PHPKurs/db_ex" key="org.eclipse.dltk.ui.last.external.project"/>
 	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="PHPDLTKSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
 	</section>
 	<section name="org.eclipse.dltk.internal.ui.text.QuickOutline">
 		<item value="false" key="org.eclipse.php.internal.ui.text.PHPOutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
@@ -22,7 +27,7 @@
 		<item value="537" key="width"/>
 		<item value="450" key="x"/>
 		<item value="116" key="y"/>
-		<item value="441" key="height"/>
+		<item value="469" key="height"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.TypeSelectionComponent">
 		<item value="true" key="show_status_line"/>

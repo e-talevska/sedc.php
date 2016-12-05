@@ -2,6 +2,12 @@
 .violet_color {
 	color: #003366;	
 }
+*::selection {
+	background: #003366;	
+}
+*::-moz-selection {
+	background: #003366;	
+}
 .title {
 	font-size: 3em;
 	text-transform: uppercase;

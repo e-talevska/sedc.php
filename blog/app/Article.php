@@ -9,6 +9,9 @@ class Article extends Model {
 			'title',
 			'content',
 			'slug',
-			'published_at' 
+			'published_at',
+			'user_id',
+			'category_id',
+			'image'
 	];
 }

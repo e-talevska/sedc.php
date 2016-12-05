@@ -7,4 +7,9 @@
 	{{ Form::text('title', null, ['class' => 'form-control']) }}
 </div>
 {{ Form::submit('Edit', ['class' => 'btn btn-default']) }}
-{{ Form::close() }} @endsection
+{{ Form::close() }}
+
+@include('partials/_errors')
+
+
+@endsection
