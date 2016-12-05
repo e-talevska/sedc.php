@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Article;
+use Illuminate\Support\Facades\Input;
 
 class ArticlesController extends Controller
 {
@@ -29,7 +30,10 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        $categories=\App\Category::lists('title','id');
+
+
+        return view('articles.create',['categories'=>$categories]);
     }
 
     /**
@@ -40,7 +44,15 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->all();
+        $data['user_id']=1;
+        $image=Input::file('image');//go zemame uploadiranio fajl
+        $imageName=time() . '.' .$image->getClientOriginalExtension();//ekstenzijata zemahme jpg,png i i davamae ime so vreme brojki nekoi ..   
+        $data['image']=$imageName;//toa upload vo baza pravime
+        $image->move("uploads",$imageName);//stavi ja vo folderot uploads
+       
+        Article::create($data);
+        return redirect('article');
     }
 
     /**
@@ -68,7 +80,12 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $article=Article::findOrFail($id);
+        $categories=\App\Category::lists('title','id');
+
+
+        return view('articles.edit',['categories'=>$categories,'article'=>$article]);
     }
 
     /**
@@ -80,8 +97,29 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article=Article::findOrFail($id);
+        $data=$request->all();
+        $data['user_id']=1;
+        $image=Input::file('image');//go zemame uploadiranio fajl (procitaj)
+        
+        if (isset($image)) {
+        $imageName=time() . '.' .$image->getClientOriginalExtension();//ekstenzijata zemahme jpg,png i i davamae ime so vreme brojki nekoi ..   
+        $data['image']=$imageName;//toa upload vo baza pravime
+        $image->move("uploads",$imageName);//stavi ja vo folderot uploads
+
+        //sea starata ke ja brisame
+        if ($article->image!='' &&  file_exists("uploads/ . $article->image")) {
+
+            unlink("uploads/ . $article->image");
+        }
     }
+
+        $article->update($data);
+        return redirect('article');
+
+
+
+         }
 
     /**
      * Remove the specified resource from storage.

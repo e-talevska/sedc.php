@@ -20,8 +20,8 @@ class PublicController extends Controller
    	'firstname'=>'Sedc',
    	'lastname'=>'<i>PHP</i>',
    	'myteam'=>[
-   		// 'John Doe',
-   		// 'Jane Doeee'
+   		'John Doe',
+   		'Jane Doeee'
 
    	]
 

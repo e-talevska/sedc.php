@@ -42,6 +42,9 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+                'title'=>'required|min:2'//za validacija od stranata nekoi si komandi so da pravat za nekoe pole primer mora da se popoli i minimum dva karakteri 
+            ]);
         Category::create($request->all());
         return redirect('category');
     }
@@ -78,6 +81,10 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
+         $this->validate($request,[
+                'title'=>'required|min:2'//za validacija od stranata nekoi si komandi so da pravat za nekoe pole primer mora da se popoli i minimum dva karakteri 
+            ]);
+
         $category=Category::findOrFail($id);
         $category->update($request->all());
         return redirect('category');

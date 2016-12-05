@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+ @extends('layouts.layout')
 
 @section('title')
 Edit Category {{$category->title}}
@@ -19,9 +19,11 @@ Edit Category {{$category->title}}
 	{{Form::submit('Edit',['class'=>'btn btn-primary'])}}
 	
 	
-	
-	
 {{Form::close()}}
+
+
+@include('partials._errors')
+
 
 
 @endsection

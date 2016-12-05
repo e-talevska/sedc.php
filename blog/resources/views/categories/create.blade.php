@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+ @extends('layouts.layout')
 
 @section('title')
 Create Category
@@ -23,5 +23,8 @@ Create Category
 	
 {{Form::close()}}
 
+@include('partials._errors')
+
 
 @endsection
+
