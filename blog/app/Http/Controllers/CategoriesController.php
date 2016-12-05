@@ -35,7 +35,10 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $this->validate($request,[
+                'title' => 'required|min:2'
+            ]);
         Category::create($request->all());
         return redirect('category');
     }
@@ -72,6 +75,9 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+                'title' => 'required|min:2'
+            ]);
         $category = Category::findOrFail($id);
         $category->update($request->all());
         return redirect('category');

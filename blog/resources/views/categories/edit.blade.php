@@ -12,4 +12,5 @@ Edit Category {{ $category->title }}
 </div>
 {{ Form::submit('Edit',['class' => 'btn btn-primary']) }}
 {{ Form::close() }}
+@include('partials._errors')
 @endsection
