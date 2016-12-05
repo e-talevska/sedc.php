@@ -20,3 +20,6 @@ Route::get('/', function () {
 //});
 
 Route::get('about', 'PublicController@about');
+//Route::get('about/{me}', 'PublicController@about');
+Route::resource('article', 'ArticlesController');
+Route::resource('category', 'CategoriesController');
