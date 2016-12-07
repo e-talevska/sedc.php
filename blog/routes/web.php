@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('about', function (){
-  //  return "About me";
+//Route::get('about', function () {
+//    return 'About me';
 //});
+
 Route::get('about', 'PublicController@about');
-Route::resource('article','ArticlesControler');
+//Route::get('about/{me}', 'PublicController@about');
+Route::resource('article', 'ArticlesController');
+Route::resource('category', 'CategoriesController');
