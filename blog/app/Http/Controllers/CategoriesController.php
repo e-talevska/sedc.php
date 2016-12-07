@@ -37,7 +37,11 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-       Category::create($request->all());
+       $this->validate($request, [
+           'title'=>'required|min:2',
+           
+       ]);
+        Category::create($request->all());
       return  redirect('category'); 
     }
 
@@ -60,6 +64,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
+         
         $category=  Category::findOrFail($id);
         return view('categories.edit',['category'=>$category]);
     }

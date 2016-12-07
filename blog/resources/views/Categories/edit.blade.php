@@ -16,5 +16,8 @@ Edit Category {{$category->title}}
 {{Form::submit('Edit',['class'=>'btn btn-primary'])}}
 
 {{Form::close()}}
+@include('partials._errors')
+
+
 
 @endsection

@@ -16,5 +16,6 @@ Create Category
 {{Form::submit('Create',['class'=>'btn btn-primary'])}}
 
 {{Form::close()}}
+@include('partials._errors')
 
 @endsection
