@@ -15,4 +15,7 @@ class Article extends Model
         'user_id',
         'image'
     ];
+    public function author(){
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }
