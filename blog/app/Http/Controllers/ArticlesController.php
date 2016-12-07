@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use Illuminate\Support\Facades\Input;
+use App\Http\Requests\ArticleRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
+    function __construct() {
+        $this->middleware('auth',['except' => ['index']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,16 +42,32 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
+        
+//        $data = $request->all();
+//        $data['user_id'] = Auth::user()->id;
+//        $image = Input::file('image');
+//        if(isset($image)) {
+//            $imageName = time().'.'.$image->getClientOriginalExtension();
+//            $data['image'] = $imageName;
+//            $image->move("uploads",$imageName);
+//        } else {
+//            $data['image'] = '';
+//        }
+//
+//        Article::create($data);
+        
         $data = $request->all();
-        $data['user_id'] = 1;
         $image = Input::file('image');
-        $imageName = time().'.'.$image->getClientOriginalExtension();
-        $data['image'] = $imageName;
-        $image->move("uploads",$imageName);
-//        var_dump($imageName);exit;
-        Article::create($data);
+        if(isset($image)) {
+            $imageName = time().'.'.$image->getClientOriginalExtension();
+            $data['image'] = $imageName;
+            $image->move("uploads",$imageName);
+        } else {
+            $data['image'] = '';
+        }
+        Auth::user()->articles()->save(new Article($data));
         return redirect('article');
     }
 
@@ -85,11 +106,11 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
         $article = Article::findOrFail($id);
         $data = $request->all();
-        $data['user_id'] = 1;
+        $data['user_id'] = Auth::user()->id;
         $image = Input::file('image');
         if(isset($image)) {
             $imageName = time().'.'.$image->getClientOriginalExtension();
