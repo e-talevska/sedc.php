@@ -7,9 +7,20 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Article;
 use Illuminate\Support\Facades\Input;
+use App\Http\Requests\ArticleRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
+
+    function __construct(){
+
+        $this->middleware('auth',['except'=>'index']);
+
+
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -42,16 +53,39 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
+        // var_dump(\Illuminate\Support\Facades\Auth::user());exit;
+       //  $data=$request->all();
+       //  $data['user_id']=Auth::user()->id;
+       //  $image=Input::file('image');//go zemame uploadiranio fajl
+       //  if (isset($image)) {
+            
+        
+       //  $imageName=time() . '.' .$image->getClientOriginalExtension();//ekstenzijata zemahme jpg,png i i davamae ime so vreme brojki nekoi ..   
+       //  $data['image']=$imageName;//toa upload vo baza pravime
+       //  $image->move("uploads",$imageName);//stavi ja vo folderot uploads
+       // }else{
+       //  $data['image']='';
+
+       // }
+       //  Article::create($data);
+
+
         $data=$request->all();
-        $data['user_id']=1;
         $image=Input::file('image');//go zemame uploadiranio fajl
+        if (isset($image)) {
+            
+        
         $imageName=time() . '.' .$image->getClientOriginalExtension();//ekstenzijata zemahme jpg,png i i davamae ime so vreme brojki nekoi ..   
         $data['image']=$imageName;//toa upload vo baza pravime
         $image->move("uploads",$imageName);//stavi ja vo folderot uploads
-       
-        Article::create($data);
+       }else{
+        $data['image']='';
+
+       }
+
+        Auth::user()->articles()->save(new Article($data));
         return redirect('article');
     }
 
@@ -95,7 +129,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
         $article=Article::findOrFail($id);
         $data=$request->all();

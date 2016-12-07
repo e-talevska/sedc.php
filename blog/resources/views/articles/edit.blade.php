@@ -13,43 +13,12 @@ Edit Article{{$article->title}}
 	{{Form::model($article,['url'=>url('article/' . $article->id),'method'=>'PUT','files'=>true,]) }}
 	
 
-	<div class="form-group">
-	{{Form::label('title','Title')}}
-	{{Form::text('title',null,['class'=>'form-control'])}}
-	</div>
-
-	<div class="form-group">
-		{{Form::label('Content','Content')}}
-	{{Form::textarea('content',null,['class'=>'form-control'])}}
-	</div>
-
-	<div class="form-group">
-		{{Form::label('slug','Slug')}}
-	{{Form::text('slug',null,['class'=>'form-control'])}}
-	</div>
-
-	<div class="form-group">
-		{{Form::label('image','Feature Image')}}
-	{{Form::file('image',null,['class'=>'form-control'])}}
-	</div>
-
-	<div class="form-group">
-		{{Form::label('category_id','Category')}}
-	{{Form::select('category_id',$categories,null,['class'=>'form-control'])}}
-	</div>
-
-	<div class="form-group">
-		{{Form::label('published_at','Published_at')}}
-	{{Form::text('published_at',null,['class'=>'form-control'])}}
-	</div>
-
-	{{Form::submit('Edit Article',['class'=>'btn btn-primary'])}}
-
-
-
+	@include('articles._form',['buttonText'=>'Edit Article'])
 
 
 	{{Form::close()}}
+
+@include('partials._errors')
 
 
 
