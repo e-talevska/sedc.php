@@ -4,16 +4,19 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 30, 2016, 6:02:16 PM
+    Created on : Nov 30, 2016, 6:02:37 PM
     Author     : code
 */
-
 .violet_color {
-    color:#990049; 
+    color: #003366;
 }
+
 a:hover {
-    text-decoration: none; /*da ja izbriseme crtkata pod linkot */
+    text-decoration: none;
 }
-.red_color {
-    color:#00993a;
+
+.btn-purple {
+    color: #fff;
+    background-color: #cc7ab7;
+    border-color: #2e7da4;
 }

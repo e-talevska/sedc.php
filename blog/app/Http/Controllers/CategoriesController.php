@@ -14,8 +14,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-         $categories = Category::all();
-        //compact('articles');
+        $categories = Category::all();
         return view('categories.list', ['categories' => $categories]);
     }
 
@@ -26,7 +25,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-       return view('categories.create');
+        return view('categories.create');
     }
 
     /**
@@ -37,12 +36,11 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-       $this->validate($request, [
-           'title'=>'required|min:2',
-           
-       ]);
+        $this->validate($request, [
+            'title' => 'required|min:2'
+        ]);
         Category::create($request->all());
-      return  redirect('category'); 
+        return redirect('category');
     }
 
     /**
@@ -64,9 +62,8 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-         
-        $category=  Category::findOrFail($id);
-        return view('categories.edit',['category'=>$category]);
+        $category = Category::findOrFail($id);
+        return view('categories.edit',['category' => $category]);
     }
 
     /**
@@ -78,7 +75,10 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=  Category::findOrFail($id);
+        $this->validate($request, [
+            'title' => 'required|min:2'
+        ]);
+        $category = Category::findOrFail($id);
         $category->update($request->all());
         return redirect('category');
     }
