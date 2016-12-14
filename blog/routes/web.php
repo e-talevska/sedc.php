@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route ::get('about','PublicController@about'){
-//    return "About me";
+//Route::get('about', function () {
+//    return 'About me';
 //});
-Route::get('about','PublicController@about');
-//Route::get('about/{me}','PublicController@about');
-Route::resource('article','ArticlesController');
-?>
+
+Route::get('about', 'PublicController@about');
+//Route::get('about/{me}', 'PublicController@about');
+Route::resource('article',  'ArticlesController');
+Route::resource('category', 'CategoriesController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
