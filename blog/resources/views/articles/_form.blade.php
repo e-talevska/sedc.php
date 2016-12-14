@@ -18,9 +18,12 @@
 
 <div class='form-group'>
     {{ Form ::label('category_id', 'Category') }}
-    {{ Form::select('category_id', $categories, ['class' =>'form-control']) }}
+    {{ Form::select('category_id', $categories, null, ['class' =>'form-control']) }}
 </div>
 <div class='form-group'>
+    {{ Form ::label('tag', 'Tag') }}
+    {{ Form::select('tag[]', $tags, null, ['id' => 'tag', class' =>'form-control', 'multiple']) }}
+<div class='form-group' style="position:relative">
     {{ Form ::label('published_at', 'Published at') }}
     {{ Form::text('published_at', null, ['class' =>'form-control']) }}
 </div>

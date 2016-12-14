@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\Article;
 use \Illuminate\Support\Facades\Input;
 use App\Http\Requests\ArticleRequest;
@@ -20,9 +20,15 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-//        compact('articles');
-        return view('articles.list',['articles' => $articles]);
+        $segment = Request::segment(1);
+        if($segment == 'admin'){
+            $articles == Article::all();
+            return view('articles.list',['articles' => $articles]);
+        }else{
+            $articles = Article::all();
+    //        compact('articles');
+            return view('articles.frontendlist',['articles' => $articles]);
+        }
     }
 
     /**
@@ -32,9 +38,13 @@ class ArticlesController extends Controller
      */
     public function create()
     {
+     
         $categories = \App\Category::pluck('title','id');
-        return view('articles.create',['categories' => $categories]);
+        $tags = \App\Tag::pluck('title','id');
+        return view('articles.create',['categories' => $categories, 'tags' => $tags]);
     }
+       
+    
 
     /**
      * Store a newly created resource in storage.
@@ -67,9 +77,12 @@ class ArticlesController extends Controller
       }else{
           $data['image'] = '';
       }
-
-        Article::create($data);
-        Auth::user()->articles()->save(new Article($data));
+        $article = Auth::user()->articles()->save(new Article($data));
+        
+        if($request->input('tag') !=null){
+        $article->tags()->attach($request->input('tag'));
+        }
+        
         return redirect('article');
     }
 
@@ -82,6 +95,7 @@ class ArticlesController extends Controller
     public function show($slug)
     {
         $article = Article::where(['slug' => $slug])->first();
+        
         if(!isset($article)) {
             return abort("404");
         }
@@ -98,7 +112,11 @@ class ArticlesController extends Controller
     {
         $article = Article::findorFail($id);
         $categories = \App\Category::pluck('title','id');
-        return view('articles.create',['categories' => $categories, 'article' => $article]);
+        $tags = \App\Tag::pluck('title','id');
+        return view('articles.edit',[
+            'categories' => $categories, 
+             'article' => $article,
+                'tags' => $tags]);
     }
 
     /**
@@ -110,8 +128,31 @@ class ArticlesController extends Controller
      */
     public function update(ArticleRequest $request, $id)
     {
-        //
+        $article = Article::findOrfail($id);
+        $data = $request->all();
+        $data['user_id'] = Auth ::user()->id;
+        $image = Input::file('image');
+        if(isset($imaGE)){
+            $imageName = time().'.'.$image->getClientOriginalExtension();
+            $data['image'] = $imageName;
+            $image->move("uploads",$imageName);
+            //delete old img
+            if($article->image !='' && file_exists("upload/".$article->image)){
+                unlink("uploads/".$article->image);
+            }
+            
+        }
+        $article->update($data);
+        
+        $tags = $request->input('tag');
+        if($request->input('tag') == null){
+             $tags =[];
+        }
+        $article->tags()->sync($tags);
+        
+        return redirect('article');
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -121,6 +162,6 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
-}
+    }
