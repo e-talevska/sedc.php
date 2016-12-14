@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-use App\Http\Requests;
+
+
+
+
 use App\Article;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Support\Facades\Auth;
-
+use Request;
 class ArticlesController extends Controller
 {
 
@@ -28,9 +30,17 @@ class ArticlesController extends Controller
      */
     public function index()
     {
+        $segment1=Request::segment(1);
+        if ($segment1=='admin') {
+            
+        
         $articles=Article::all();
         // compact('articles');//compact e ista kako taa podole funkcija istoto go pravi kako kluc stava vrednost articles i bara promenlva so isto ime znaci u zagradata mora da bide ista so promenlivata pogore inace nema da funkcionira
         return view('articles.list',['articles'=>$articles]);
+            }else{
+                $articles=Article::all();
+                return view ('articles.frontendlist',['articles'=>$articles]);
+            }
 
     }
 
@@ -42,9 +52,10 @@ class ArticlesController extends Controller
     public function create()
     {
         $categories=\App\Category::lists('title','id');
+        $tags=\App\Tag::lists('title','id');
 
 
-        return view('articles.create',['categories'=>$categories]);
+        return view('articles.create',['categories'=>$categories],['tags'=>$tags]);
     }
 
     /**
@@ -71,6 +82,7 @@ class ArticlesController extends Controller
        // }
        //  Article::create($data);
 
+        // var_dump($request->all());exit;
 
         $data=$request->all();
         $image=Input::file('image');//go zemame uploadiranio fajl
@@ -85,7 +97,10 @@ class ArticlesController extends Controller
 
        }
 
-        Auth::user()->articles()->save(new Article($data));
+        $article=Auth::user()->articles()->save(new Article($data));
+        if ($request->input('tag')!=null) {
+        $article->tags()->attach($request->input('tag_list'));
+}
         return redirect('article');
     }
 
@@ -118,8 +133,10 @@ class ArticlesController extends Controller
         $article=Article::findOrFail($id);
         $categories=\App\Category::lists('title','id');
 
+        $tags=\App\Tag::lists('title','id');
 
-        return view('articles.edit',['categories'=>$categories,'article'=>$article]);
+
+        return view('articles.edit',['categories'=>$categories,'article'=>$article,'tags'=>$tags]);
     }
 
     /**
@@ -149,6 +166,11 @@ class ArticlesController extends Controller
     }
 
         $article->update($data);
+        $tags=$request->input('tag_list');
+        if ($request->input('tag_list')!==null) {
+            $tags=[];
+        $article->tags()->sync($request->input('tag_list'));
+    }
         return redirect('article');
 
 

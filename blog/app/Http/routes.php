@@ -21,9 +21,11 @@ Route::get('/', function () {
 // });
 
 Route::get('about','PublicController@about');
-Route::resource('article','ArticlesController');
+Route::resource('admin/article','ArticlesController');
 Route::resource('category','CategoriesController');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('article','ArticlesController@index');
+

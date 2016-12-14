@@ -23,3 +23,5 @@ Edit Article{{$article->title}}
 
 
 @endsection
+
+@include('partials._script')

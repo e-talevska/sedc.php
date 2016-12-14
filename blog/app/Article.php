@@ -22,8 +22,18 @@ class Article extends Model
 
     	return $this->belongsTo('App\User','user_id');
 
+    }
+     public function category(){
 
+        return $this->belongsTo('App\Category','category_id');
 
+    }
+    public function tags(){
+
+        return $this->belongsToMany('App\Tag','article_tag');//i tuka moze posle article tag da se napisa foregn key od taa tabela
+    }
+    public function getTagListAttribute(){
+        // return $this->tags()->lists('id')->toArray();
     }
 
 

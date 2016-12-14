@@ -24,3 +24,5 @@ Create Article
 
 
 @endsection
+
+@include('partials._script')

@@ -22,8 +22,12 @@
 		{{Form::label('category_id','Category')}}
 	{{Form::select('category_id',$categories,null,['class'=>'form-control'])}}
 	</div>
+	<div class="form-group" >
+		{{Form::label('tag','Tag')}}
+		{{Form::select('tag_list[]',$tags,null,['id'=>'tag','class'=>'form-control','multiple'])}}
+	</div>
 
-	<div class="form-group">
+	<div class="form-group" style="position: relative;">
 		{{Form::label('published_at','Published_at')}}
 	{{Form::text('published_at',null,['class'=>'form-control'])}}
 	</div>
