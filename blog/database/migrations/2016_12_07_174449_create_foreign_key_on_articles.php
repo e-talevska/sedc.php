@@ -15,8 +15,8 @@ class CreateForeignKeyOnArticles extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             $table->engine = 'innodb';
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

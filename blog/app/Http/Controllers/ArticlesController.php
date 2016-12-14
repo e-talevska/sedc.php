@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\Http\Requests\ArticleRequest;
 use App\Article;
 use Illuminate\Support\Facades\Auth;
@@ -16,14 +16,23 @@ class ArticlesController extends Controller {
 	 */
 
 	function __construct () {
-		$this->middleware('auth', ['except' => 'index']);
+		$this->middleware('auth', ['except' => ['index']]);
 	}
 
 	public function index() {
+		$segment1 = Request::segment(1);
+		if($segment1 == 'admin') {
 		$articles = Article::all ();
 		return view ( 'articles.list', [ 
 				'articles' => $articles 
 		] );
+		}
+		else {
+			$articles = Article::all ();
+		return view ( 'articles/frontend_list', [ 
+				'articles' => $articles 
+		] );
+		}
 	}
 	
 	/**
@@ -33,8 +42,10 @@ class ArticlesController extends Controller {
 	 */
 	public function create() {
 		$categories = \App\Category::pluck ( 'title', 'id' );
+		$tags = \App\Tag::pluck('title', 'id');
 		return view ( 'articles/create', [ 
-				'categories' => $categories 
+				'categories' => $categories,
+				'tags' => $tags
 		] );
 	}
 	
@@ -71,7 +82,9 @@ class ArticlesController extends Controller {
 		} else {
 			$data['image'] = '';
 		}
-		Auth::user()->articles()->save(new Article($data));
+		$article = Auth::user()->articles()->save(new Article($data));
+		if($request->input('tag') != null)
+		$article->tags()->attach($request->input('tag'));
 		return redirect ( 'article' );
 	}
 	
@@ -101,9 +114,11 @@ class ArticlesController extends Controller {
 	public function edit($id) {
 		$article = Article::findOrFail ( $id );
 		$categories = \App\Category::pluck ( 'title', 'id' );
+		$tags = \App\Tag::pluck('title', 'id');
 		return view ( 'articles/edit', [ 
 				'categories' => $categories,
-				'article' => $article 
+				'article' => $article,
+				'tags' => $tags
 		] );
 	}
 	
@@ -131,6 +146,10 @@ class ArticlesController extends Controller {
 		}
 		
 		$article->update ( $data );
+		if($request->input('tag') != null)
+		$article->tags()->sync($request->input('tag'));
+		else
+		$article->tags()->sync([]);
 		return redirect('article');
 	}
 	

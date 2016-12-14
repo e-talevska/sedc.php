@@ -14,3 +14,5 @@ Edit Article {{ $article->title }}
 {{ Form::close() }}
 @include('partials/_errors')
 @endsection
+
+@include('partials/_scripts')
