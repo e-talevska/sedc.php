@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\Article;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\ArticleRequest;
@@ -22,9 +22,22 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $segment = Request::segment(1);
+        if($segment =='admin'){
+            $articles = Article::all();
+        
+        
 //        compact('articles');
         return view('articles.list',['articles' => $articles]);
+        
+        }
+        else {
+            $articles = Article::all();
+        
+        
+//        compact('articles');
+        return view('articles.frontendlist',['articles' => $articles]);
+        }
     }
 
     /**
@@ -35,7 +48,8 @@ class ArticlesController extends Controller
     public function create()
     {
         $categories = \App\Category::pluck('title', 'id');
-        return view('articles.create', ['categories' => $categories]);
+       $tags = \App\Tag::pluck('title', 'id');
+        return view('articles.create', ['categories' => $categories,'tags' => $tags]);
     }
 
     /**
@@ -61,6 +75,8 @@ class ArticlesController extends Controller
         
        
       //  Article::create($data);
+        
+        
         $data =$request->all();
          $image = Input::file('image');
         if(isset($image)){
@@ -71,7 +87,9 @@ class ArticlesController extends Controller
         else{
             $data['image']='';
         }
-        Auth::user()->articles()->save(new Article($data));
+        $article = Auth::user()->articles()->save(new Article($data));
+     if($request->input('tag')!=null){
+        $article->tags()->attach($request->input('tag')); }
         return redirect('article');
     }
 
@@ -100,7 +118,8 @@ class ArticlesController extends Controller
     {
         $article = Article::findOrFail($id);
         $categories = \App\Category::pluck('title', 'id');
-        return view('articles.edit', ['categories' => $categories, 'article' => $article]);
+        $tags = \App\Tag::pluck('title', 'id');
+        return view('articles.edit', ['categories' => $categories, 'article' => $article, 'tags'=>$tags]);
     }
 
     /**
@@ -128,7 +147,14 @@ class ArticlesController extends Controller
         }
 //        var_dump($article);exit;
         $article->update($data);
-        return redirect('article');
+
+        $tags = $request->input('tag');
+        if($request->input('tag') == null){
+            $tags=[];
+        }
+
+        $article->tags()->sync($tags); 
+    return redirect('article'); 
     }
 
     /**

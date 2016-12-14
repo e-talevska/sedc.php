@@ -11,3 +11,4 @@ Create Article
 {{ Form::close() }}
 @include('partials._errors')
 @endsection
+@include('partials._script')
