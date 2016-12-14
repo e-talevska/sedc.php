@@ -20,7 +20,15 @@ class Article extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
     
+     public function category() {
+        return $this->belongsTo('App\Category', 'category_id');
+    }
+    
     public function tags() {
         return $this->belongsToMany('App\Tag', 'article_tag', 'article_id');
+    }
+    
+    public function getTagAttribute() {
+        return $this->tags()->pluck('id')->toArray();
     }
 }

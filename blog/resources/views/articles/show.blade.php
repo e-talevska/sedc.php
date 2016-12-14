@@ -11,5 +11,13 @@
     <img src='/uploads/{{ $article->image }}' alt="Feature image" >
     @endif
     <div class="content">{{ $article->content }}</div>
+    @if($article->tags()->exists())
+        <h3>Tags</h3>
+        <ul>
+            @foreach($article->tags as $tag)
+            <li>{{ $tag->title }}</li>
+            @endforeach
+        </ul>
+    @endif
 </article>
 @endsection
