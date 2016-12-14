@@ -19,6 +19,10 @@
     {{ Form::select('category_id', $categories , null, ['class' => 'form-control']) }}
 </div>
 <div class='form-group'>
+    {{ Form::label('tag', 'Tag') }}
+    {{ Form::select('tag', $tags , null, ['class' => 'form-control', 'multiple']) }}
+</div>
+<div class='form-group'>
     {{ Form::label('published_at', 'Published at') }}
     {{ Form::text('published_at', null, ['class' => 'form-control']) }}
 </div>

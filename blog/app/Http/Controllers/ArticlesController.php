@@ -33,7 +33,8 @@ class ArticlesController extends Controller
     public function create()
     {
         $categories = \App\Category::pluck('title', 'id');
-        return view('articles.create', ['categories' => $categories]);
+        $tags = \App\Tag::pluck('title', 'id');
+        return view('articles.create', ['categories' => $categories, 'tags' => $tags]);
     }
 
     /**
