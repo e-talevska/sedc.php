@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+//<<<<<<< stefan_ristevski
+//use Illuminate\Http\Request;
+//=======
+//use Request;
+//>>>>>>> master
 use App\Article;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\ArticleRequest;
@@ -20,17 +24,23 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $segment1 = Request::segment(1);
-        if($segment1 == 'admin') {
-            $articles = Article::all();
+//<<<<<<< stefan_ristevski
+  //      $articles = Article::all();
+//        compact('articles');
+  //      return view('articles.list',['articles' => $articles]);
+//=======
+   //     $segment1 = Request::segment(1);
+    //    if($segment1 == 'admin') {
+   //         $articles = Article::all();
     //        compact('articles');
-            return view('articles.list',['articles' => $articles]);
-        } else {
-            $articles = Article::all();
+    //        return view('articles.list',['articles' => $articles]);
+    //    } else {
+    //        $articles = Article::all();
     //        compact('articles');
-            return view('articles.frontendlist',['articles' => $articles]);
-        }
+    //        return view('articles.frontendlist',['articles' => $articles]);
+     //   }
         
+//>>>>>>> master
     }
 
     /**
@@ -41,8 +51,12 @@ class ArticlesController extends Controller
     public function create()
     {
         $categories = \App\Category::pluck('title', 'id');
-        $tags = \App\Tag::pluck('title', 'id');
-        return view('articles.create', ['categories' => $categories, 'tags' => $tags]);
+//<<<<<<< stefan_ristevski
+      //  return view('articles.create', ['categories' => $categories]);
+//=======
+       // $tags = \App\Tag::pluck('title', 'id');
+     //   return view('articles.create', ['categories' => $categories, 'tags' => $tags]);
+//>>>>>>> master
     }
 
     /**
@@ -65,8 +79,13 @@ class ArticlesController extends Controller
 //            $data['image'] = '';
 //        }
 //
+//<<<<<<< stefan_ristevski
+//        Article::create($data);
+        
+//=======
 //        $article = Article::create($data);
 //        var_dump($request->all());exit;
+//>>>>>>> master
         $data = $request->all();
         $image = Input::file('image');
         if(isset($image)) {
@@ -76,10 +95,14 @@ class ArticlesController extends Controller
         } else {
             $data['image'] = '';
         }
-        $article = Auth::user()->articles()->save(new Article($data));
-        if($request->input('tag') != null) {
-            $article->tags()->attach($request->input('tag'));
-        }
+//<<<<<<< stefan_ristevski
+     //   Auth::user()->articles()->save(new Article($data));
+//=======
+      //  $article = Auth::user()->articles()->save(new Article($data));
+     //   if($request->input('tag') != null) {
+      //      $article->tags()->attach($request->input('tag'));
+      //  }
+//>>>>>>> master
         return redirect('article');
     }
 
@@ -108,13 +131,17 @@ class ArticlesController extends Controller
     {
         $article = Article::findOrFail($id);
         $categories = \App\Category::pluck('title', 'id');
-        $tags = \App\Tag::pluck('title', 'id');
-        return view('articles.edit',[
-                    'categories' => $categories, 
-                    'article' => $article,
-                    'tags' => $tags
-                ]);
-    }
+//<<<<<<< stefan_ristevski
+     //   return view('articles.edit', ['categories' => $categories, 'article' => $article]);
+//=======
+     //   $tags = \App\Tag::pluck('title', 'id');
+     //   return view('articles.edit',[
+      //              'categories' => $categories, 
+      //              'article' => $article,
+      //              'tags' => $tags
+        //        ]);
+//>>>>>>> master
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -140,13 +167,16 @@ class ArticlesController extends Controller
             }
         }
         $article->update($data);
+//<<<<<<< stefan_ristevski
+//=======
         
-        $tags = $request->input('tag');
-        if($request->input('tag') == null) {
-            $tags = [];
-        }
-        $article->tags()->sync($tags);
+    //    $tags = $request->input('tag');
+      //  if($request->input('tag') == null) {
+       //     $tags = [];
+      //  }
+      //  $article->tags()->sync($tags);
         
+//>>>>>>> master
         return redirect('article');
     }
 

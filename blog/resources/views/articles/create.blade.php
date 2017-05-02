@@ -10,6 +10,10 @@ Create Article
 @include('articles._form',['buttonText' => 'Create Article'])
 {{ Form::close() }}
 @include('partials._errors')
-@endsection
+//<<<<<<< stefan_ristevski
+//@endsection
+//=======
+//@endsection
 
-@include('partials._scripts')
+//@include('partials._scripts')
+//>>>>>>> master
